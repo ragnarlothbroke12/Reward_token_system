@@ -23,4 +23,3 @@ const TokenBalance = ({ contract, account, balance, setBalance }) => {
 };
 
 export default TokenBalance;
-
