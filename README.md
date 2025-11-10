@@ -1,16 +1,106 @@
-# React + Vite
+# 🪙 Reward Token DApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed during the PhillipCapital blockchain case study challenge to explore ERC-20 implementation and wallet integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📚 Table of Contents
+- [📌 Project Overview](#-project-overview)
+- [📁 Folder Structure](#-folder-structure)
+- [⚙️ Smart Contract Details](#️-smart-contract-details)
+- [🚀 Getting Started](#-getting-started)
+- [🧾 Author](#-author)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Project Overview
+
+**Use Case:**  
+PhillipCapital India aims to build a blockchain-based reward system for customers completing learning activities.  
+Each user earns ERC-20 tokens (PRT – *Phillip Reward Token*), which can be transferred and checked via MetaMask.
+
+**Tech Stack:**
+- Solidity (Smart Contract)
+- React.js (Frontend)
+- Ethers.js (Blockchain interaction)
+- MetaMask (Wallet connection)
+- Remix + Sepolia Testnet (Deployment)
+
+---
+
+## 📁 Folder Structure
+```bash
+client/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── ConnectWallet.jsx
+│   │   ├── TokenBalance.jsx
+│   │   ├── RewardUser.jsx
+│   │   └── TransferTokens.jsx
+│   │
+│   ├── smart_contract/
+│   │   └── RewardToken.sol
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── contract.js
+│
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## ⚙️ Smart Contract Details
+
+**File:** `src/smart_contract/RewardToken.sol`
+
+### Contract Summary:
+- **Token Name:** Phillip Reward Token  
+- **Symbol:** PRT  
+- **Total Supply:** 1,000,000 tokens  
+- **Network:** Sepolia Testnet  
+- **Contract Address:** *0x60f61615c1f4e289e3aaabc32fb852f3f4216716*  
+
+### Main Functions:
+| Function | Description |
+|-----------|--------------|
+| `transfer(address to, uint amount)` | Allows users to send tokens to another wallet |
+| `balanceOf(address account)` | Checks the token balance of any wallet |
+| `rewardUser(address user, uint amount)` | Mints new tokens as a reward (only owner can call) |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/ragnarlothbroke12/Reward_token_system.git
+cd client
+
+🚀 Getting Started
+1️⃣ Clone the Repository
+git clone https://github.com/ragnarlothbroke12/Reward_token_system.git
+cd client
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Start the Development Server
+npm run dev
+
+
+The app will start on http://localhost:5173
+```
+## 🧾 Author
+
+Name: Siyaram Kumar
+
+Email: siyarambiss886@gmail.com
