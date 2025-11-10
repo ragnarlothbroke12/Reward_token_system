@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-export const CONTRACT_ADDRESS = "0x60f61615c1f4e289e3aaabc32fb852f3f4216716";
+export const CONTRACT_ADDRESS = "0x6CbE2b4C5eC1fa753B6e6cA89304B2a2E447dC9D";
 
 export const ABI = [
   "function balanceOf(address account) view returns (uint256)",
